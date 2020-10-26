@@ -20,10 +20,7 @@ class EmployeeController extends Controller
     }
 
     public function update(Request $request, $id) {
-        $post = Post::findOrFail($id);
-        $post->title = $request->title;
-        $post->body = $request->body;
-        $post->save();
+
     }
 
 
