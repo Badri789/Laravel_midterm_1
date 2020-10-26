@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.home');
 });
+
+Route::get("/employee_list", [\App\Http\Controllers\EmployeeController::class, "index"]);
+
+Route::get("/employees/{id}/edit", [\App\Http\Controllers\EmployeeController::class, "edit"])->name("employees.edit");
+
+Route::put("/employees/{id}/update", [\App\Http\Controllers\EmployeeController::class, "update"])->name("employees.update");
+
+
+
+
